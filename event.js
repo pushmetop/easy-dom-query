@@ -12,6 +12,11 @@ export const Event = (extendsClass) => class extends extendsClass {
       .split(" ")
       .map(event => this.$els.map($el => $el.addEventListener(event, fn)));
   }
+
+  off(of, fn) {
+    of.split(" ")
+      .map(event => this.$els.map($el => $el.removeEventListener(event, fn)));
+  }
 }
 
 export default Event;
