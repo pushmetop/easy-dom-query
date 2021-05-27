@@ -4,8 +4,13 @@ export const Event = (extendsClass) => class extends extendsClass {
   }
 
   click(fn) {
-    this.$els.addEventListener("click", fn);
-    this.$els.map($el => $el.addEventListener("click", fn));
+    this.on("click", fn);
+  }
+
+  on(of, fn) {
+    of
+      .split(" ")
+      .map(event => this.$els.map($el => $el.addEventListener(event, fn)));
   }
 }
 
