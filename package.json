@@ -1,0 +1,6 @@
+{
+    "name": "easy-dom-query",
+    "version": "1.0.0",
+    "description": "不考虑兼容性用于熟悉 DOM 操作的仿 jQuery 库",
+    "main": "index.js"
+}
