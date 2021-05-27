@@ -19,7 +19,7 @@ export class Base {
     of = this.makeArray(of);
 
     this.length = of.length;
-    of.map(($el, index) => (this[index] = $el));
+    this.$els = of.map(($el, index) => (this[index] = $el));
 
     return this;
   }
