@@ -14,7 +14,8 @@ export const Event = (extendsClass) => class extends extendsClass {
   }
 
   off(of, fn) {
-    of.split(" ")
+    of
+      .split(" ")
       .map(event => this.$els.map($el => $el.removeEventListener(event, fn)));
   }
 }
